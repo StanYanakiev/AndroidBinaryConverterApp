@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context="stany.binaryapp.MainActivity">
+
+
+    <EditText
+        android:id="@+id/decimalInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/decimalPrompt"
+        android:layout_marginTop="38dp"
+        android:digits="0123456789-."
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/decimalPrompt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Decimal"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/binaryPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/decimalInput"
+        android:layout_marginTop="159dp"
+        android:text="Binary(Twos Compliment)"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/binaryInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/binaryPrompt"
+        android:layout_marginTop="31dp"
+        android:digits="0123456789-."
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/decimalOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/decimalInput"
+        android:layout_marginTop="70dp"
+        android:hint="Output "
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/binaryOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/binaryInput"
+        android:layout_marginTop="54dp"
+        android:hint="Output"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/decimalButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/decimalInput"
+        android:layout_marginLeft="95dp"
+        android:layout_marginStart="95dp"
+        android:layout_toEndOf="@+id/decimalInput"
+        android:layout_toRightOf="@+id/decimalInput"
+        android:onClick="decimalInputClick"
+        android:text="Convert!" />
+
+    <Button
+        android:id="@+id/binaryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/binaryInput"
+        android:layout_alignLeft="@+id/decimalButton"
+        android:layout_alignStart="@+id/decimalButton"
+        android:onClick="binaryInputClick"
+        android:text="Convert!" />
+</RelativeLayout>
